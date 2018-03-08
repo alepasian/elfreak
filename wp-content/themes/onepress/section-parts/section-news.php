@@ -90,6 +90,10 @@ $desc = get_theme_mod( 'onepress_news_desc' );
 <?php if ( ! onepress_is_selective_refresh() ){ ?>
 </section>
 <?php } ?>
+<div class="container">
+<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
 <?php endif;
+
 wp_reset_postdata();
 

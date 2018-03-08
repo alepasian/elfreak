@@ -325,6 +325,7 @@ ol {
 
 ul li, ol li {
   margin: 8px 0;
+  list-style: none;
 }
 
 dt {

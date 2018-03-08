@@ -148,6 +148,15 @@ function onepress_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Ultimas', 'onepress' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 
     if ( class_exists( 'WooCommerce' ) ) {
         register_sidebar( array(
@@ -428,3 +437,22 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/dashboard.php';
 add_filter('show_admin_bar', '__return_false');
+add_filter( 'the_content', 'add_related_posts_after_post_content' );
+function add_related_posts_after_post_content( $content ) {
+ 
+    //check if it's a single post page.
+    if ( is_single() ) {
+ 
+        // check if we're inside the main loop
+        if ( in_the_loop() && is_main_query() ) {
+ 
+            // add your own attributes here (between the brackets [ ... ])
+            $shortcode = '[related_posts_by_tax title="Relacionados" before_title="<h3>" after_title="</h3>" caption="post_title" format="thumbnails" image_size="medium"]';
+ 
+            // add the shortcode after the content
+            $content = $content . $shortcode;
+        }
+    }
+ 
+    return $content;
+}

@@ -440,16 +440,12 @@ input[type="week"] {
   font-size: 15px;
   font-weight: normal;
   line-height: 22px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  border-bottom: 1px solid #eeee22;
   box-sizing: border-box;
   color: #000000;
 }
@@ -467,17 +463,14 @@ input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+ 
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
-  border-color: #EBEBEB;
+  border-color: none;
   border-bottom: 1px solid #fff !important;
-  background: #e9e9e9;
+  background: #e9e9e9 opacity 0.8;
 }
 
 button::-moz-focus-inner {
@@ -922,7 +915,9 @@ Footer widgets
 
 .onepress-menu {
   float: right;
+  clear: both;
 }
+
 .onepress-menu ul {
   position: absolute;
   display: none;
@@ -4130,4 +4125,60 @@ img.mfp-img {
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
+}
+
+
+/*******************************EL FREAK DE LA BIC CSS************************/
+@media screen and (min-width: 720px) {
+.main-navigation .menu_auxiliar_elfreak .search-form span {
+  color: #eeee22;
+}
+.search-submit {
+  background: transparent;
+  border: none;
+}
+.search-submit i {
+  color: #eeee22!important;
+  background: transparent;
+  border: none;
+
+}
+.main-navigation {
+  float: right;
+}
+.home .no-scroll .main-navigation .menu_auxiliar_elfreak {
+  display: block;
+}
+.home .no-scroll .site-branding .site-logo-div {
+  margin-top: 63px;
+}
+.main-navigation .menu_auxiliar_elfreak {
+  float: right;
+  clear: both;
+  height: 67px;
+  display: none;
+
+  
+}
+
+.main-navigation .menu_auxiliar_elfreak li{
+  float: left;
+  
+}
+.page-id-25 .page-header {
+  background: url(http://localhost/elfreak/wp-content/uploads/2018/03/bg-contacto-e1520790505208.jpg) no-repeat top;
+}
+.page-id-25 .breadcrumbs {
+  display: none;
+}
+.page-id-25 .page-header .entry-title, .page-id-25 .page-header .page-title {
+  font-size: 72px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+
+}
+.page-id-25 h2 {
+  display: none;
 }

@@ -239,7 +239,7 @@ if ( ! function_exists( 'onepress_site_header' ) ) {
                                 </div>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/juanpablo.bianchi.3" target="_blank">facebook</a>
+                                <a href="https://www.facebook.com/juanpablo.bianchi.3" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
                             </li>
                         </ul>
                         <ul class="onepress-menu">
@@ -557,11 +557,11 @@ if ( ! function_exists( 'onepress_custom_inline_style' ) ) {
 
             $t_site_name_color = sanitize_hex_color( get_theme_mod( 'onepress_transparent_site_title_c' ) );
             if ( $t_site_name_color ) {
-                echo " .is-transparent .site-header.no-scroll .site-title, .is-transparent .site-header.no-scroll .site-title .site-text-logo { color: {$t_site_name_color}; }";
+                echo " .is-transparent .site-header.no-scroll .site-title, .is-transparent .site-header.no-scroll .site-title .site-text-logo { color: {$t_site_name_color};";
             }
             $t_tagline_color = sanitize_hex_color( get_theme_mod( 'onepress_transparent_tag_title_c' ) );
             if ( $t_tagline_color ) {
-                echo " .is-transparent .site-header.no-scroll .site-description { color: {$t_tagline_color}; }";
+                echo " .is-transparent .site-header.no-scroll .site-description { color: {$t_tagline_color};}";
             }
 
             ?>
@@ -673,6 +673,7 @@ if ( ! function_exists( 'onepress_custom_inline_style' ) ) {
                     background: #<?php echo $header_bg_color; ?>;
                     border-bottom: 0px none;
                 }
+                
                 <?php
             } // END $header_bg_color
 

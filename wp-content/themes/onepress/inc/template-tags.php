@@ -241,6 +241,9 @@ if ( ! function_exists( 'onepress_site_header' ) ) {
                             <li>
                                 <a href="https://www.facebook.com/juanpablo.bianchi.3" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
                             </li>
+                            <li>
+                                <a href="https://www.instagram.com/elfreakdelabic/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            </li>
                         </ul>
                         <ul class="onepress-menu">
                         

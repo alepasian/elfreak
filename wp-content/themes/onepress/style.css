@@ -447,7 +447,7 @@ input[type="week"] {
   background-color: transparent;
   border-bottom: 1px solid #eeee22;
   box-sizing: border-box;
-  color: #000000;
+  color: #eeee22;
 }
 textarea:focus,
 input[type="date"]:focus,
@@ -470,9 +470,11 @@ input[type="week"]:focus {
   -o-transition: all 0.2s linear;
   border-color: none;
   border-bottom: 1px solid #fff !important;
-  background: #e9e9e9 opacity 0.8;
+  color: white;
 }
-
+input[placeholder="Buscar …"] {
+  color: white;
+}
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -2387,7 +2389,9 @@ section > .customize-partial-edit-shortcut button {
 .hero-content-style1 a:active, .hero-content-style1 a:focus, .hero-content-style1 .btn:active, .hero-content-style1 .btn:focus {
   outline: none;
 }
-
+#hero {
+  z-index: 11!important;
+}
 #hero .btn {
   box-shadow: none;
 }
@@ -4129,7 +4133,13 @@ img.mfp-img {
 
 
 /*******************************EL FREAK DE LA BIC CSS************************/
+.main-navigation .menu_auxiliar_elfreak {
+  display: none;
+ }
 @media screen and (min-width: 720px) {
+ .main-navigation .menu_auxiliar_elfreak {
+  display: block;
+ }
 .main-navigation .menu_auxiliar_elfreak .search-form span {
   color: #eeee22;
 }
@@ -4163,6 +4173,7 @@ img.mfp-img {
 
 .main-navigation .menu_auxiliar_elfreak li{
   float: left;
+  margin-left: 14px;
   
 }
 .page-id-25 .page-header {
@@ -4179,4 +4190,10 @@ img.mfp-img {
 }
 .page-id-25 h2 {
   display: none;
+}
+ 
+
+
+.search-results {
+
 }

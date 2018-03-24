@@ -14,6 +14,7 @@ get_header(); ?>
 		<div class="page-header">
 			<div class="container">
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'onepress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+
 			</div>
 		</div>
 
@@ -22,7 +23,10 @@ get_header(); ?>
 			<section id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
+
+
 				<?php if ( have_posts() ) : ?>
+
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -35,6 +39,19 @@ get_header(); ?>
 						 */
 						get_template_part( 'template-parts/content', 'search' );
 						?>
+				<div class="entry"> <a href="<?php echo esc_url( get_permalink() ); ?>">
+
+                <?php
+                    if ( has_post_thumbnail() ) { // check if the post Thumbnail
+                        the_post_thumbnail();
+                    } else {
+                        //your default img
+                    }
+
+                    the_excerpt(); //your short description
+                ?>
+                </a>
+            </div>
 
 					<?php endwhile; ?>
 

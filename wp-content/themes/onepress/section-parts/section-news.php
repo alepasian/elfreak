@@ -32,6 +32,7 @@ $desc = get_theme_mod( 'onepress_news_desc' );
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="blog-entry wow slideInUp">
+					
 						<?php
 
                         $cat = absint( get_theme_mod( 'onepress_news_cat' ) );
@@ -95,5 +96,7 @@ $desc = get_theme_mod( 'onepress_news_desc' );
 </div>
 <?php endif;
 
+
 wp_reset_postdata();
+
 
